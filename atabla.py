@@ -1,4 +1,9 @@
-s the string that represents the title of the column to extract. 
+import pandas as pd
+f = open('file.txt')
+dicce = dict()
+
+def column(f,t):
+  #f is the string that represents the title of the column to extract. 
   for l in f:
     lr = l.strip()
     if lr.startswith(t): 
@@ -17,3 +22,4 @@ column(f,t3)
 
 df = pd.DataFrame(ficce)
 df.to_excel('file.xlsx')
+
